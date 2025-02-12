@@ -7,6 +7,7 @@
     </div>
     <div id="menu">
         <button id="show-login">Login</button>
+        <div id="result"></div>
     </div>
     <?php include 'LoginPopup.php';?>
 </div>

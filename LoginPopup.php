@@ -10,6 +10,7 @@
             <label for="password">Password</label>
             <input type="password" id="password">
         </div>
+        <div id="resultpopup"></div>
         <div class="form-element">
             <button id="login">Accedi</button>
         </div>
