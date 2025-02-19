@@ -1,10 +1,12 @@
 <?php
     header('Content-Type: application/json');
-    
+    require_once 'config/config.php';
     $user = $_POST['user'];
     $password = $_POST['password'];
     
-    if ($user == "gio" && $password == "0000") {
+    $conn = connectDB();
+    
+    if (userExists($conn, $user, $password)) {
         $response = [
             "success" => true,
             "user" => $user,
@@ -16,6 +18,8 @@
             "message" => "Username o password errati!"
         ];
     }
+
+    $conn->close();
 
     echo json_encode($response);
     
